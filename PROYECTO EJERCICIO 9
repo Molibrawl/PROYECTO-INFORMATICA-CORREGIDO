@@ -1,0 +1,31 @@
+/*Leer cuatro calificaciones parciales y calcular la calificación final ponderada (20%,
+20%, 25% y 35%).*/
+
+#include<stdio.h>
+
+int main(){
+//Variables para solicitar datos al usuario
+float calif1;
+float calif2;
+float calif3;
+float calif4;
+float califinal;
+//Ingresar datos
+printf("Ingresar calificacion 1:");
+scanf("%f",&calif1);
+printf("Ingresar calificacion 2:");
+scanf("%f",&calif2);
+printf("Ingresar calificacion 3:");
+scanf("%f",&calif3);
+printf("Ingresar calificacion 4:");
+scanf("%f",&calif4);
+//Operaciones para obtener los valores solicitados
+
+califinal = (calif1 * 0.20) + (calif2 * 0.20) + (calif3 * 0.25) + (calif4 * 0.35);
+
+//Mostrar resultados
+printf("La calificacion final es:%f\n",califinal);
+
+
+}
+
