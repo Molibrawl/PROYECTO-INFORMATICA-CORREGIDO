@@ -1,0 +1,55 @@
+/*11. Leer un número entero y decir si es positivo, negativo o cero, y además si es par o
+impar.*/
+
+#include<stdio.h>
+int main(){
+
+//Variables para solicitar datos al usuario
+
+int numeroentero;
+int positivo;
+int negativo;
+int cero;
+int par;
+int impar;
+
+printf("Ingresar numero entero:");
+scanf("%d",&numeroentero);
+
+//Condicional para identificar si el numero es positivo o negativo
+
+ if(numeroentero > 0 )
+    {
+        printf("Positivo\n");
+    }
+if(numeroentero < 0 )
+    {
+        printf("Negativo\n");
+    }
+
+if(numeroentero == 0 )
+    {
+        printf("Cero\n");
+    }
+//Condicional para saber si el numero entero es par o impar
+
+if(numeroentero % 2 == 0)
+{
+    printf("El numero es par");
+}
+else
+{
+    printf("El numero es impar");
+}
+
+
+
+
+
+
+
+
+
+
+
+}
