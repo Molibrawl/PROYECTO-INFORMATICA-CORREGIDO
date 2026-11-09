@@ -1,0 +1,39 @@
+//10. Resolver la ecuación ax + b = cx + d. Ecuación de primer grado
+
+#include<stdio.h>
+int main(){
+float a;
+float b;
+float x;
+float c;
+float d;
+
+// Variables para solicitar datos al usuario
+
+printf("Resolver ax+b=cx+d");
+
+printf("Ingresa el valor de a:");
+
+scanf("%f",&a);
+
+printf("Ingresa el valor de b:");
+
+scanf("%f",&b);
+
+printf("Ingresa el valor de c:");
+
+scanf("%f",&c);
+
+printf("Ingresa el valor de d:");
+
+scanf("%f",&d);
+
+//Operaciones
+
+x = (d-b)/(a-c);
+
+//Mostrar resultados
+
+printf("El valor de x es: %f",x);
+
+}
