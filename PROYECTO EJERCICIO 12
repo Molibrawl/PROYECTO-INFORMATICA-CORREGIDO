@@ -1,0 +1,73 @@
+/*12. Calcular el costo de un terreno cuyo precio es de $900 por m², con descuento del
+10% si el área pasa de 500 m² y del 15% si pasa de 1000 m².*/
+
+#include<stdio.h>
+
+int main(){
+
+//Variables para solicitar datos al usuario
+
+float costoterreno;
+float areaterreno;
+float preciom2;
+float descuento;
+float costofinal;
+
+printf("Ingresar area total del terreno:");
+
+scanf("%f",&areaterreno);
+
+preciom2 = 900;
+
+//Operaciones para obtener los valores solicitados
+
+costoterreno = areaterreno * preciom2;
+
+
+
+if(areaterreno > 1000)
+{
+    descuento = costoterreno * 0.15;
+}
+else
+{
+    if(areaterreno > 500)
+    {
+        descuento = costoterreno * 0.10;
+    }
+    else
+    {
+        descuento = 0;
+    }
+
+}
+
+ costofinal = costoterreno - descuento;
+
+ //Mostrar resultados
+
+printf("El costo del terreno es:%f\n",costoterreno);
+
+printf("El descuento es:%f\n",descuento);
+
+printf("El costo final del terreno es:%f\n",costofinal);
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
