@@ -1,0 +1,111 @@
+/*15. Leer los tres lados de un triángulo. Verificar que puedan formarlo y, en ese caso,
+clasificarlo por sus lados (equilátero, isósceles, escaleno) y por sus ángulos
+(acutángulo, rectángulo, obtusángulo).*/
+
+#include<stdio.h>
+int main(){
+
+// Variables para solicitar datos al usuario
+
+float ladoa;
+float ladob;
+float ladoc;
+float ladomayor;
+float ladomenor;
+float ladomedio;
+
+printf("Leer lado a del triangulo :");
+scanf("%f",&ladoa);
+
+printf("Leer lado b del triangulo :");
+scanf("%f",&ladob);
+
+printf("Leer lado c del triangulo :");
+scanf("%f",&ladoc);
+
+// Verificar si pueden formar un triangulo
+
+if(ladoa > 0 && ladob > 0 && ladoc > 0 &&
+ladoa + ladob > ladoc &&
+ladoa + ladoc > ladob &&
+ladob + ladoc > ladoa)
+{
+    printf("\nSI pueden formar un triangulo\n");
+
+    // Clasificacion por sus lados
+
+    if(ladoa == ladob && ladob == ladoc)
+    {
+        printf("Triangulo equilatero\n");
+    }
+    else if(ladoa == ladob || ladoa == ladoc || ladob == ladoc)
+    {
+        printf("Triangulo isosceles\n");
+    }
+    else
+    {
+        printf("Triangulo escaleno\n");
+    }
+
+    // Identificar el lado mayor
+
+    if(ladoa >= ladob && ladoa >= ladoc)
+    {
+        ladomayor = ladoa;
+    }
+    else
+    {
+        if(ladob >= ladoa && ladob >= ladoc)
+        {
+            ladomayor = ladob;
+        }
+        else
+        {
+            ladomayor = ladoc;
+        }
+    }
+
+    // Identificar el lado menor
+
+    if(ladoa <= ladob && ladoa <= ladoc)
+    {
+        ladomenor = ladoa;
+    }
+    else
+    {
+        if(ladob <= ladoa && ladob <= ladoc)
+        {
+            ladomenor = ladob;
+        }
+        else
+        {
+            ladomenor = ladoc;
+        }
+    }
+
+    // Identificar el lado intermedio
+
+    ladomedio = ladoa + ladob + ladoc - ladomayor - ladomenor;
+
+    // Clasificacion por sus angulos
+
+    if(ladomayor * ladomayor == ladomedio * ladomedio + ladomenor * ladomenor)
+    {
+        printf("Triangulo rectangulo\n");
+    }
+    else if(ladomayor * ladomayor < ladomedio * ladomedio + ladomenor * ladomenor)
+    {
+        printf("Triangulo acutangulo\n");
+    }
+    else
+    {
+        printf("Triangulo obtusangulo\n");
+    }
+
+}
+else
+{
+    printf("\nNO pueden formar un triangulo\n");
+}
+
+}
